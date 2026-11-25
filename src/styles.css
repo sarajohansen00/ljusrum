@@ -1,0 +1,30 @@
+@import '@fontsource-variable/dm-sans';
+
+/* Samma värden används på webbsidan och i Storybook. */
+:root {
+  --color-page: #f4f3ed;
+  --color-surface: #ffffff;
+  --color-text: #222c28;
+  --color-accent: #285d4c;
+  --color-line: #b7c0b9;
+  --text-body: 1rem;
+  --text-heading: clamp(2rem, 6vw, 3.5rem);
+  --text-card-title: 1.5rem;
+  --space-card: clamp(1rem, 4vw, 2rem);
+  font-family: 'DM Sans Variable', system-ui, sans-serif;
+  color: var(--color-text);
+  background: var(--color-page);
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-size: var(--text-body); }
+.site { width: min(100% - 2rem, 58rem); margin: 0 auto; }
+nav { display: flex; gap: 1.5rem; border-bottom: 1px solid var(--color-line); }
+nav a { padding: 1rem 0; color: var(--color-accent); text-underline-offset: 0.25em; }
+nav [aria-current="page"] { font-weight: 700; }
+main { padding-block: 2.5rem; }
+h1 { font-size: var(--text-heading); line-height: 1.1; margin: 0 0 1.5rem; }
+h2 { font-size: var(--text-card-title); line-height: 1.25; margin: 0 0 0.75rem; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
